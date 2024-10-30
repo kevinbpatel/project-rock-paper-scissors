@@ -67,15 +67,17 @@ function playRound(humanChoice, computerChoice) {
             break;
     }
 
-    score.textContent = `Player: ${humanScore}, Computer: ${computerScore}`
-
     if (humanScore == 5) { 
         results.textContent = "PLAYER WINGS THE GAME!";
-        humanScore == 0;
+        humanScore = 0;
+        computerScore = 0;
     } else if (computerScore == 5) { 
         results.textContent = "COMPUTER WINGS THE GAME!";
-        computerScore == 0;
+        computerScore = 0;
+        humanScore = 0;
     }
+
+    score.textContent = `Player: ${humanScore}, Computer: ${computerScore}`
 
 }
 
